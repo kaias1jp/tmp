@@ -1,0 +1,16 @@
+sudo apt install curl
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update
+sudo apt install nodejs build-essential
+sudo apt install git
+git clone https://github.com/cutls/TheDesk.git
+sudo apt install libfontconfig1-dev
+cd TheDesk/app
+npm install
+npm install --save-dev electron-rebuild
+./node_modules/.bin/electron-rebuild
+npm install electron-packager --save-dev
+cd ..
+app/node_modules/electron-packager/cli.js ./app TheDesk --executable-name="TheDesk" --app-copyright="Copyright (c) TheDesk 2018 Cutls.com 2015 All Right Reserved" --platform=linux --arch=x64,ia32 --electron-version=3.0.10 --overwrite
