@@ -134,10 +134,10 @@
 
 // ここに処理を記載する
 (function(){
-  if (location.href.match('https://misskey.xyz')) {
-    GM_addStyle(GM_getResourceText('CCSS1'));
-  } else {
+  if (location.href.match(/misskey.xyz/)) {
     GM_addStyle(GM_getResourceText('CCSS2'));
+  } else {
+    GM_addStyle(GM_getResourceText('CCSS1'));
   }
 })();
 
