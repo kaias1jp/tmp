@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         #InstanceTicker (Type-1) user.js 
-// @namespace    https://github.com/tmp/istest
+// @namespace    https://github.com/tmp/
 // @version      201901292039
 // @description  #InstanceTicker とは、Mastodon タイムライン上の投稿者のみなさんに所属インスタンス名を彩るカスタムCSSです。
 // @author       kaias1jp
