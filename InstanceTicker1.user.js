@@ -111,8 +111,9 @@
 // @match        https://gingadon.com/*
 // @match        https://pao.moe/*
 // @match        https://dotdon.jp/*
+// @match        https://misskey.xyz/*
 //
-// @resource     CCSS https://socailapi.app/it-css-test.php
+// @resource     CCSS https://socialapi.app/api/instanceticker/css/userjs/it.css
 // @grant        GM_addStyle
 // @grant        GM_getResourceText
 //
