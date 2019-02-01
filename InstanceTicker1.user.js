@@ -113,7 +113,8 @@
 // @match        https://dotdon.jp/*
 // @match        https://misskey.xyz/*
 //
-// @resource     CCSS https://socialapi.app/api/instanceticker/css/userjs/it.css
+// @resource     CCSS1 https://raw.githubusercontent.com/weepjp/InstanceTicker/master/InstanceTicker1.css
+// @resource     CCSS2 https://socialapi.app/api/instanceticker/css/userjs/it.css
 // @grant        GM_addStyle
 // @grant        GM_getResourceText
 //
@@ -131,5 +132,13 @@
 //
 // ==/UserScript==
 
-GM_addStyle(GM_getResourceText('CCSS'));
+// ここに処理を記載する
+(function(){
+  if (location.href.match('https://misskey.xyz')) {
+    GM_addStyle(GM_getResourceText('CCSS1'));
+  } else {
+    GM_addStyle(GM_getResourceText('CCSS2'));
+  }
+})();
+
 
